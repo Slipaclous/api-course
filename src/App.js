@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import HomePage from './pages/HomePage';
 import CustomersPage from './pages/CustomersPage';
 import CustomerPageWithPagination from './pages/CustomersPageWithPagination'
+import InvoicesPage from './pages/InvoicesPage';
 
 const App = () => {
   return ( 
@@ -12,11 +13,11 @@ const App = () => {
 
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/invoices" element={<InvoicesPage />} />
       <Route path="/customers" element={<CustomersPage />} />
       <Route path="/customerpage" element={<CustomerPageWithPagination />} />
       
     </Routes>
-    <h1>Test</h1>
     </main>
   </Router>
    );
