@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Pagination from '../components/Pagination';
 import customersAPI from '../services/customersAPI';
+import { Link } from 'react-router-dom';
 
 const CustomersPage = (props) => {
     const [customers, setCustomers] = useState([]);
@@ -107,6 +108,7 @@ const CustomersPage = (props) => {
                                disabled={customer.invoices.length > 0}
                                  className="btn btn-sm btn-danger"
                                   onClick={() => handleDelete(customer.id)}>Supprimer</button>
+                                <Link to={"/customers/" + customer.id} className="btn btn-sm btn-primary">Editer</Link>
                             </td>
 
                         </tr>
